@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ForumServer</name>
+    </assembly>
+    <members>
+        <member name="M:ForumServer.Controllers.UserController.GetAllUsers">
+            <summary>
+            Get All Users
+            </summary>
+            <returns>List of Users</returns>
+            <response code="200">Returns created item</response>
+            <response code="400">Null or incorrect object</response>
+            <response code="500">Error inside controller</response>
+        </member>
+    </members>
+</doc>
