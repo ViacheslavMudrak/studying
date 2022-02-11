@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Image scroller</title>
+    <style>
+        img {margin: 20px;
+             width: 300px;
+             height: 300px;
+        }
+        #pic2 {width: 500px;
+              height: 500px;
+              border: 3px solid green;
+              padding: 10px;
+        }
+        button {margin: 10px;}
+    </style>
+</head>
+<body>
+    <img id="pic1" onclick="back()" src="img1.jpg" />
+    <img id="pic2" src="img2.jpg" />
+    <img id="pic3" onclick="next()" src="img3.jpg" />
+    <br />
+    <button type="button" id="but1" onclick="back()">Назад</button>
+    <button type="button" id="but2" onclick="next()">Вперёд</button>
+
+    <script>
+        const images = ["blank.jpg", "img1.jpg", "img2.jpg", "img3.jpg", "img4.jpg", "img5.jpg", "img6.jpg", "img7.jpg", "blank.jpg"];
+        let pathArr = document.getElementById("pic1").src.split("/");
+        let pic1Index = images.indexOf(pathArr[pathArr.length - 1]);
+        function back() {
+            if (pic1Index == 0) return;
+            document.getElementById("pic1").src = images[pic1Index - 1];
+            document.getElementById("pic2").src = images[pic1Index];
+            document.getElementById("pic3").src = images[pic1Index + 1];
+            pic1Index--;
+        }
+        function next() {
+            if (pic1Index == images.length - 3) return;
+            document.getElementById("pic1").src = images[pic1Index + 1];
+            document.getElementById("pic2").src = images[pic1Index + 2];
+            document.getElementById("pic3").src = images[pic1Index + 3];
+            pic1Index++;
+        }
+
+    </script>
+</body>
+</html>
