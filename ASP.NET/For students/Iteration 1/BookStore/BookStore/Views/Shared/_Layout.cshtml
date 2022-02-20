@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Book Store - @ViewData["Title"]</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333333;
+        }
+
+        li {
+            float: left;
+        }
+
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 16px;
+                text-decoration: none;
+            }
+
+                li a:hover {
+                    background-color: #111111;
+                }
+    </style>
+</head>
+<body>
+    <header class="container">
+        <ul>
+            <li><a href="/Books/AllBooks">All Books</a></li>
+            <li><a href="/Books/AllBooks/available">Available</a></li>
+            <li><a href="/Books/AllAuthors">All Authors</a></li>
+            <li><a href="/Books/AllBooks/programming">About Programming</a></li>
+            <li><a href="/Books/AllBooks/less50">Lower 50$</a></li>
+        </ul>
+    </header>
+    <div class="container mt-4">
+        @RenderBody()
+    </div>    
+</body>
+</html>

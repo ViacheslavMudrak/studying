@@ -1,0 +1,27 @@
+﻿@using System.Xml
+@model XmlNodeList
+
+
+<h2>@ViewData["Title"]</h2>
+<br />
+<div class="row mt-2 mb-2">
+    @{
+        foreach (XmlNode book in Model)
+        {
+            string status = @book["status"].InnerText;
+            string button = status == "available" ? "Take" : "Return";
+        <div class="col-lg-4">
+            <p>Title: <b>@book["title"].InnerText</b></p>
+            <p>Author: @book["author"].InnerText</p>
+            <p>Category: @book["category"].InnerText</p>
+            <p>Price: @book["price"].InnerText $</p>
+            <p>
+                Status: @status
+                <button class="mx-2" type="button">@button</button>
+            </p>
+            <br /> <br />
+
+        </div>
+        }
+    }
+</div>

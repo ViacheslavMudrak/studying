@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<books>
+	<book>
+		<author>Andrew Troelsen</author>
+		<title>Pro C# 7</title>
+		<category>Programming</category>
+		<price>150</price>
+		<status>available</status>
+	</book>
+	<book>
+		<author>Isaac Birger</author>
+		<title>Strength of Materials</title>
+		<category>Technical</category>
+		<price>35</price>
+		<status>available</status>
+	</book>
+	<book>
+		<author>Stiven Skiena</author>
+		<title>Data Science</title>
+		<category>Mathematical</category>
+		<price>180</price>
+		<status>taken</status>
+	</book>
+	<book>
+		<author>Philip Kotler</author>
+		<title>Marketing Management</title>
+		<category>Financial</category>
+		<price>45</price>
+		<status>taken</status>
+	</book>
+	<book>
+		<author>Cay Horstman</author>
+		<title>Core Java</title>
+		<category>Programming</category>
+		<price>200</price>
+		<status>available</status>
+	</book>
+	<book>
+		<author>Taras Shevchenko</author>
+		<title>Kobzar</title>
+		<category>Literary</category>
+		<price>40</price>
+		<status>available</status>
+	</book>
+</books>

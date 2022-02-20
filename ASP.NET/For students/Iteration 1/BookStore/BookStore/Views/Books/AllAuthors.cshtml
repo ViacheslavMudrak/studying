@@ -1,0 +1,14 @@
+﻿@using System.Xml
+@model XmlNodeList
+
+
+<h2>@ViewData["Title"]</h2>
+<br />
+<div class="row mt-2 mb-2">
+    @{
+        foreach (XmlNode book in Model)
+        {
+            <p>@book["author"].InnerText</p>
+        }
+    }
+</div>
